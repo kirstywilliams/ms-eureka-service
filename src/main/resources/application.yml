@@ -1,0 +1,28 @@
+server:
+  port: 8761
+
+eureka:
+  client:
+    registerWithEureka: false
+    fetchRegistry: false
+  server:
+      waitTimeInMsWhenSyncEmpty: 0
+
+logging:
+  level:
+    com.netflix: 'WARN'
+    org.springframework.cloud: 'WARN'
+
+# SSH Based Git-Repository
+spring:
+  cloud:
+    config:
+      enabled: false
+      server:
+        git:
+          uri: https://github.com/kirstywilliams/ms-config
+
+# Server Security
+security:
+  user:
+    password: '{cipher}fc2d18c3e4ab42301e43e36bdee8bb80b7516bc9a1ef68e35ead416b69939bd0'
